@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/checksesion.js"></script>
+    <link rel="stylesheet" href="css/oscuro.css">
+  <script src="js/modooscuro.js"></script>
+  <link rel="stylesheet" href="css/adminpanel.css">
+  <script src="js/adminpanel.js"></script>
+  <title>Panel Administrador</title>
+
+</head>
+
+<body>
+    <div id="menu"></div>
+
+    
+
+    <div class="main">
+        <div class="container">
+
+            <div class="row">
+                <h1>PANEL ADMINISTRADOR</h1>
+                <br>
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">ADMINISTRAR USUARIOS</div>
+                        <div class="panel-body"><img src="img/user.png" class="img-responsive" style="width:100%"
+                                alt="Image"></div>
+                        <div class="panel-footer"><a href="adminuser.html">Entrar</a></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">ADMINISTRAR PRODUCTOS</div>
+                        <div class="panel-body"><img src="img/product.png" class="img-responsive" style="width:100%"
+                                alt="Image"></div>
+                        <div class="panel-footer"><a href="adminproduct.html">Entrar</a></div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">ADMINISTRAR PEDIDOS</div>
+                        <div class="panel-body"><img src="img/pedido.png" class="img-responsive" style="width:100%"
+                                alt="Image"></div>
+                        <div class="panel-footer"><a href="adminpedidos.html">Entrar</a></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

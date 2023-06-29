@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/adminproduct.js"></script>
+    <script src="js/checksesion.js"></script>
+    <link rel="stylesheet" href="css/oscuro.css">
+    <link rel="stylesheet" href="css/adminproduct.css">
+  <script src="js/modooscuro.js"></script>
+    <script>
+        function addproduct() {
+            window.location.href = "addproduct.html";
+        }
+    </script>
+    <title>Administracion Producto</title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="adminpanel.html">Principal</a>
+        <a href="index.html">Tienda</a>
+        <a href="adminuser.html">Usuarios</a>
+        <a href="adminproduct.html">Productos</a>
+        <a href="adminpedidos.html">Pedidos</a>
+    </div>
+
+    <div id="dialog-confirm" title="Empty the recycle bin?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>¿Estas seguro de que quieres eliminar?</p>
+    </div>
+
+    <div id="container">
+        <div class="main">
+            <h1>PRODUCTOS</h1>
+            <div id="editarform">
+                <form id="formed" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-25">
+                          <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="col-75">
+                            <input id="nombre" type="text" name="nombre">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="descripcion">Descripcion</label>
+                        </div>
+                        <div class="col-75">
+                            <input id="descripcion" type="text" name="descripcion">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="precio">Precio</label>
+                        </div>
+                        <div class="col-75">
+                            <input id="precio" type="number" name="precio" min="0" value="0" step="0.01">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="cantidad">Cantidad</label>
+                        </div>
+                        <div class="col-75">
+                             <input id="cantidad" min="0" value="0" type="text" name="cantidad">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="imagen">Imagen</label>
+                        </div>
+                        <div class="col-75">
+                            <input id="imagen" type="file" name="imagen">
+        
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="genero">Genero</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="genero" id="genero"></select>
+                        </div>
+                      </div>
+                      <input id="imagened" type="hidden" value="" name="imagened">
+                      <br>
+                      <div class="row">
+                        <button id="editinput" type="button">Editar</button>
+                    </div>
+        
+        
+
+
+
+
+                </form>
+            </div>
+            <table border='1'>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Imagen</th>
+                    <th>Genero</th>
+                    <th colspan="2"><input type="button" value="Anadir" onclick="addproduct()"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

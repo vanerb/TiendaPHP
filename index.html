@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Principal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/oscuro.css">
+  <link rel="stylesheet" href="css/principal.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/mostrarproducts.js"></script>
+  <!--<script src="js/comprar.js"></script>-->
+  <script src="js/modooscuro.js"></script>
+  <script src="js/checksesion.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+  <div id="menu">
+
+
+  </div>
+  <div id="search">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- The form -->
+    <form class="example">
+      <input id="buscarhold" type="text" placeholder="Buscar.." name="search">
+      <button id="buscar" type="button"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div class="mode">
+    <label for="change">Modo oscuro</label>
+
+    <span id="change" class="change">OFF</span>
+  </div>
+
+  <div id="filter">
+    <form id="formselect">
+      <fieldset>
+        <label for="filterselect">Genero</label>
+        <select name="filtername" id="filterselect">
+          <option value="todo">Todo</option>
+        </select>
+        
+
+      </fieldset>
+
+    </form>
+  </div>
+
+
+
+  <br>
+  <div id="products" class="products">
+    <div class='container'>
+      <div class='row'>
+
+      </div>
+    </div>
+  </div>
+
+  <h2 style="text-align: center;">Opiniones de nuestros clientes</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"La mejor pagina para comprar videojuegos"<br><span style="font-style:normal;">Giorno Giovanna</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Lo pedí el miercoles y lo recibi el viernes RAPIDISIMO!"<br><span style="font-style:normal;">Qtaro
+            Kujo</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Totalmente recomendable la pagina"<br><span style="font-style:normal;">Johnny Joestar</span></h4>
+      </div>
+      <div class="item">
+        <h4>"100% fiable"<br><span style="font-style:normal;">Gyro Zeppeli</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>Telefono: +34 000 00 00 00
+    <p>Correo: vanerbweb@gmail.com
+    </p>
+  </footer>
+
+</body>
+
+</html>

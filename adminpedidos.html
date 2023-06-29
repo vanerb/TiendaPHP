@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/adminpedidos.js"></script>
+    <link rel="stylesheet" href="css/oscuro.css">
+    <link rel="stylesheet" href="css/adminpedido.css">
+    <script src="js/modooscuro.js"></script>
+    <script>
+        function addproduct() {
+            window.location.href = "addproduct.html";
+        }
+    </script>
+    <title>Adminitracion pedidos</title>
+    
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="adminpanel.html">Principal</a>
+        <a href="index.html">Tienda</a>
+        <a href="adminuser.html">Usuarios</a>
+        <a href="adminproduct.html">Productos</a>
+        <a href="adminpedidos.html">Pedidos</a>
+    </div>
+
+    <div id="dialog-confirm" title="Empty the recycle bin?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>¿Estas seguro de que quieres eliminar?</p>
+    </div>
+
+
+
+    <div id="container">
+        <div class="main">
+            <h1>PEDIDOS</h1>
+            <div id="editarform">
+                <form id="formed">
+                    <div class="row">
+                        <div class="col-25">
+                          <label for="usuario">Usuario</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="usuario" id="usuario" readonly>
+                            <!--<select name="usuario" id="usuario"></select>-->
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="pedido">Pedido</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="selectpedido" id="pedido">
+                                <option value="preparando">Preparando</option>
+                                <option value="enviado">Enviado</option>
+                                <option value="en reparto">En reparto</option>
+                                <option value="entregado">Entregado</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="direccion">Direccion</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="direccion" id="direccion">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="ciudad">Ciudad</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ciudad" id="ciudad">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="codigo">Codigo Postal</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" name="codigo" id="codigo">
+        
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="idcesta1">Id cesta</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" name="idcesta1" id="idcesta1" readonly="true">
+        
+                        </div>
+                      </div>
+                      
+                      
+                      <br>
+                      <div class="row">
+                        <button id="editar" type="button">Editar</button>
+                    </div>
+
+
+
+
+
+                    
+
+                </form>
+            </div>
+            <table border='1'>
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Estado</th>
+                    <th>Direccion</th>
+                    <th>Ciudad</th>
+                    <th>Codigo Postal</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
